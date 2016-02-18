@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     }
 };
 var core_1 = require('angular2/core');
+var hightlight_directive_1 = require("./hightlight.directive");
 var TeacherListComponent = (function () {
     function TeacherListComponent() {
         this.color = 'red';
@@ -14,9 +15,10 @@ var TeacherListComponent = (function () {
     TeacherListComponent = __decorate([
         core_1.Component({
             selector: "teacher-list",
-            template: "\n        <div class='teacher-list'>\n            <div >Teacher list</div>\n            <div [style.color]=\"color\"> Pending....</div>\n        </div>\n\n    ",
+            template: "\n        <div class='teacher-list'>\n            <div >Teacher list</div>\n            <div [style.color]=\"color\"> Pending....</div>\n            <span myHighlight>Highlight me!</span>\n        </div>\n\n    ",
             styleUrls: ['css/teacher-list.css'],
-            encapsulation: core_1.ViewEncapsulation.Emulated
+            encapsulation: core_1.ViewEncapsulation.Emulated,
+            directives: [hightlight_directive_1.HighlightDirective]
         })
     ], TeacherListComponent);
     return TeacherListComponent;
